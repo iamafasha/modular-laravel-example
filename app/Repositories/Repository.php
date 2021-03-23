@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Cinema\Repositories;
+namespace App\Repositories;
 
 use App\Repositories\RepositoryInterface;
 use Illuminate\Database\Eloquent\Model;
@@ -31,7 +31,7 @@ class Repository implements RepositoryInterface
      */
     public function create(array $data)
     {
-        return $this->model->create($data)
+        return $this->model->create($data);
     }
 
     /**
@@ -39,7 +39,7 @@ class Repository implements RepositoryInterface
      * 
      * @param int $id
      */
-    public function update(array $data, int $id)
+    public function update(array $data, $id)
     {
         $existingRecord = $this->model->find($id);
         return $this->model->update($data);
