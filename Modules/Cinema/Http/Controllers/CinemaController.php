@@ -5,16 +5,25 @@ namespace Modules\Cinema\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use App\Repositories\Repository;
+use Modules\Cinema\Models\Cinema;
 
 class CinemaController extends Controller
 {
+    protected $model;
+
+    public function __construct(Cinema $cinema)
+    {
+        $this->model = new Repository($cinema);
+    }
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function index()
     {
-        return view('cinema::index');
+        // return view('cinema::index');
+        return $this->model->all();
     }
 
     /**

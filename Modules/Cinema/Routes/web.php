@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('cinema')->group(function() {
+Route::prefix('cinema')->group(function () {
     Route::get('/', 'CinemaController@index');
 });

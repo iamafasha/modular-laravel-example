@@ -85,6 +85,6 @@ class Repository implements RepositoryInterface
      */
     public function with($relations)
     {
-        return $this->model->witj($relations);
+        return $this->model->with($relations);
     }
 }

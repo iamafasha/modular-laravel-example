@@ -5,16 +5,27 @@ namespace Modules\Showtime\Http\Controllers;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use App\Repositories\Repository;
+use Modules\Showtime\Models\Showtime;
 
 class ShowtimeController extends Controller
 {
+    protected $model;
+
+    public function __construct(Showtime $showtime)
+    {
+        // return $this->model = new Repository($showtime);
+        return $this->model = new Repository($showtime);
+    }
     /**
      * Display a listing of the resource.
      * @return Renderable
      */
     public function index()
     {
-        return view('showtime::index');
+        // return view('showtime::index');
+        $shows = $this->model->with(['cinema', 'movie'])->get();
+        return view('showtime::index', compact('shows'));
     }
 
     /**

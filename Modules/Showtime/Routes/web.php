@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('showtime')->group(function() {
-    Route::get('/', 'ShowtimeController@index');
+Route::prefix('showtime')->group(function () {
+    Route::get('/', 'ShowtimeController@index')->name('showtime');
 });

@@ -2,6 +2,7 @@
 
 namespace Modules\Movie\Database\Seeders;
 
+use Modules\Movie\Database\Seeders\MovieTableSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +17,6 @@ class MovieDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        $this->call(MovieTableSeeder::class);
     }
 }

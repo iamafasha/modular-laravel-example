@@ -4,6 +4,7 @@ namespace Modules\Showtime\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Showtime\Database\Seeders\ShowtimeTableSeeder;
 
 class ShowtimeDatabaseSeeder extends Seeder
 {
@@ -16,6 +17,6 @@ class ShowtimeDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        // $this->call("OthersTableSeeder");
+        // $this->call(ShowtimeTableSeeder::class);
     }
 }
