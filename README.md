@@ -82,8 +82,8 @@ To install with Sail you must have docker installed [Docker](https://www.docker.
 git clone git clone https://github.com/JuliRash/modular-laravel-example.git
 cd modular-laravel-example
 cp .env.example.docker .env
-sail up
-sail artisan migrate --seed
+./vendor/bin/sail  up
+./vendor/bin/sail artisan migrate --seed
 ```
 
 The application can be accessed at  [http://localhost:8000/](http://localhost:8000/). if you installed manually
