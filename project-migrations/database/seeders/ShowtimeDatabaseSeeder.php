@@ -1,12 +1,12 @@
 <?php
 
-namespace Modules\Movie\Database\Seeders;
+namespace Database\Seeders;
 
-use Modules\Movie\Database\Seeders\MovieTableSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Modules\Showtime\Database\Seeders\ShowtimeTableSeeder;
 
-class MovieDatabaseSeeder extends Seeder
+class ShowtimeDatabaseSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,6 +17,6 @@ class MovieDatabaseSeeder extends Seeder
     {
         Model::unguard();
 
-        $this->call(MovieTableSeeder::class);
+        // $this->call(ShowtimeTableSeeder::class);
     }
 }

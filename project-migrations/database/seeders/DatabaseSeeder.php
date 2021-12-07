@@ -1,12 +1,10 @@
 <?php
 
-namespace Database\Seeders;
-
 use Illuminate\Database\Seeder;
-use Modules\User\Database\Seeders\UserTableSeeder;
-use Modules\Cinema\Database\Seeders\CinemaTableSeeder;
-use Modules\Movie\Database\Seeders\MovieTableSeeder;
-use Modules\Showtime\Database\Seeders\ShowtimeTableSeeder;
+use Database\Seeders\UserTableSeeder;
+use Database\Seeders\MovieTableSeeder;
+use Database\Seeders\CinemaTableSeeder;
+use Database\Seeders\ShowtimeTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
